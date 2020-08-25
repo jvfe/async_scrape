@@ -24,5 +24,5 @@ async def async_scrape(url_to_extract):
 
 async def main(urls):
 
-    return await asyncio.gather(*[get_dataavail_text(url) for url in urls])
+    return await asyncio.gather(*[async_scrape(url) for url in urls])
 
